@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,7 +22,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Log.d("==>", "Button clicked");
                 Intent intent = new Intent(MainActivity.this, SecondActivity.class);
-                intent.putExtra("name", "Daniel"); // Optional
+                EditText myNewEditText = (EditText) findViewById(R.id.editedText);
+                intent.putExtra("carriedText", myNewEditText.getText().toString()); // Optional
 
                 startActivity(intent);
             }

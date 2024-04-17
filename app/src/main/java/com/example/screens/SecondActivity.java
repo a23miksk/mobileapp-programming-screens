@@ -17,11 +17,11 @@ public class SecondActivity extends AppCompatActivity {
         setContentView(R.layout.activity_second);
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
-            String name = extras.getString("name");
-            int number = extras.getInt("number");
+            String text = extras.getString("carriedText");
+
             // Do something with the name and number
-            TextView textViewName = findViewById(R.id.name);
-            textViewName.setText(name);
+            TextView textViewText = findViewById(R.id.text);
+            textViewText.setText(text);
         }
 
     }
